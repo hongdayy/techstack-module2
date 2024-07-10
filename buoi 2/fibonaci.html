@@ -14,37 +14,49 @@
         // 0 1 1 2 3 5 8 13 21 ...
         // f0 f1 f2 f3 f4 f5 f6 f7 f8 ....
         // nhập vào số 6 -> báo kết quả là 8
-        var n = prompt("Số thứ tự của số Fibonacci bạn muốn biết là gì?");
-        n = parseInt(n);
-        var n1 = 0;
-        var n2 = 1;
-        var fib = 1;
-        for (i = 2; i <= n; i++) {
-            fib = n1 + n2;
-            n1 = n2;
-            n2 = fib;
-        }
-        alert(`Số fibonacci bạn đang cần tìm là: ${n2}`);
- 
        
-        var number = getDataInt("Nhập số n:", 0, Number.MAX_VALUE);
-        var fiboNacci = fiboNacci(number);
-        alert('fiboNacci ở vị trí n là :'+fiboNacci);
+        var n = prompt("Vị trí n trong dãy Fibonaci bạn chọn là:");
+        n = parseInt(n);
+        // khởi tạo hai số đầu tiên
+        var a = 0;
+        var b = 1;
+        // trường hợp nếu n là số 0 và 1
+        if (n == 0) {
+        alert(`Số Fibonacci bạn cần tìm là: ${a}`);
+        } else 
+        if (n == 1) {
+        alert(`Số Fibonacci bạn cần tìm là: ${b}`);
+        } else {
+        // còn nếu mà số Fibonacci ở vị trí thứ n
+        for (i = 2; i <= n; i++) {
+            b = a + b; // b = tổng a b trc đó
+            a = b - a; // a thành gtri trc đó của b
+        }
+        alert(`Số fibonacci bạn đang cần tìm là: ${b}`);
+        }
+       
+        
 
         //advance
         // vẫn là dãy fibonaci nhưng nhập 1 số nguyên n
         // tìm số cận dưới của n mà thuộc day fibonaci
-        var n = prompt("Số thứ tự của số Fibonacci bạn muốn biết số cận dưới là gì?");
-        n = parseInt(n);
-        var n1 = 0;
-        var n2 = 1;
-        var fib = 1;
-        for (i = 2; i <= n; i++) {
-            fib = n1 + n2;
-            n1 = n2;
-            n2 = fib;
+        var n = prompt("Nhập số nguyên n trong dãy Fibonaci:");
+        var n = parseInt(n);
+        // khởi tạo hai số đầu tiên
+        var a = 0;
+        var b = 1;
+        var fib = 0;
+      // Tìm số Fibonacci lớn nhất nhỏ hơn hoặc bằng n
+        for (; b <= n;) { // biến a b khởi tạo ở trên rồi nên chắc ko đưa vào
+            fib = b;
+            b = a + b; 
+            a = b - a; 
         }
-        alert(`Số fibonacci bạn đang cần tìm là: ${n2}`);
+        alert(`Fibonaci cần tìm là $(b)`)
+
+
+
+        
 
     </script>
 </body>
