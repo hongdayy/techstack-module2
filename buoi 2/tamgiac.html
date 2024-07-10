@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>tính chu vi và diện tích tam giác</h1>
+    <script type="text/javascript">
+       
+        var hoanthanh = false;
+        while(hoanthanh != true) {   //!= LÀ KHÁC
+            //KHI NHẬP SAI CẠNH TAM GIÁC BẮT NHẬP LẠI VÀ TÍNH DIỆN TÍCH TAM GIÁC
+            var canh1 = prompt("nhập cạnh thứ nhất:");
+            canh1 = parseFloat(canh1);
+            var canh2 = prompt("nhập cạnh thứ 2:");
+            canh2 = parseFloat(canh2);
+            var canh3 = prompt('nhập cạnh thứ 3:');
+            canh3 = parseFloat(canh3);
+
+
+        //KHI NHẬP ĐÚNG TAN GIÁC THÌ TÍNH ĐƯỢC VÀ BÁO LÀ HOÀN THÀNH
+        if(canh1 + canh2 > canh3 && canh1 + canh2 > canh3 && canh2 + canh3 > canh1) {
+            var p = canh1 + canh2 + canh3;
+            alert(`chu vi tam giác: ${p}`); // cảnh báo, nó sẽ hiện ngay phía bên ngoài màn hình
+            // console.log(`chu vi tam giác: ${p}`);
+            var p2 = p/2;
+            var s = Math.sqrt(p2 * (p2 - canh1) * (p2 - canh2) * (p2 - canh3));
+            alert(` diện tích tam giác: ${p}`); // cảnh báo, nó sẽ hiện ngay phần cảnh báo ngay phía bên ngoài màn hình
+            // console.log(` diện tích tam giác: ${p}`);  // ``: dùng chèn các biểu thức vào chuỗi,${p}: Đây là cú pháp trong chuỗi mẫu để chèn giá trị của biến p vào chuỗi.
+            hoanthanh = true; // HOÀN THÀNH
+        }else {
+            
+            alert('Đây không phải độ dài ba cạnh tam giác')// cảnh báo, nó sẽ hiện ngay phần cảnh báo ngay phía bên ngoài màn hình
+                hoanthanh = false;              //NẾU SAI THÌ HOÀN THÀNH LÀ FALSE -
+          // ĐOẠN NÀY LÀ NẾU KO MUỐN DÙNG hoanthanh = false, kiểu cho nó hiện nhập lại nếu sai
+            // alert("đây ko phải độ dài ba cạnh tam giác!"); 
+            // var check = confirm("bạn có muốn nhập lại hay không?");
+            // if (check == true){
+            //     hoanthanh = false;
+            // } else {
+         
+        
+        }
+        }
+      
+        // alert("kết thúc chương trình !")
+    </script>
+</body>
+</html>

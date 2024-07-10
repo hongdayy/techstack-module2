@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1 câu lệnh (command) yêu cầu máy tính thực hiện 1 công việc</h1>
+    <script type="text/javascript">
+        // console.log("Hello world!");
+        // console.log("welcome to Module 2");
+        // console.log(5 + 4);
+        var x = 5; //Khai báo 1 biến tên là x và có giá trị ban đầu là 5
+        x = x + 5; //10
+        var y = 4;
+        console.log (x + y);
+        y = y + 2;
+        console.log (x + y);
+        //--> ý nghĩa của biến
+        // - viết liền nhau, không dấu, không khoảng cách
+        // - không ký tự đặc biệt như  #@!.. ngoại trừ $
+        // - bắt đầu bằng chữ cái, không bắt đầu bằng số: a1 thì ok nhưng 1a thì k được
+        // - không dùng các từ khóa có sẵn của js ( if, why, do,...)
+
+
+        //number
+        var n = 4.14159;
+        // string: chuỗi
+         var S = "Techstack2405";
+         var S1 = "Welcome";
+         var S2 = "You";
+        //boolean đúng -sai
+        var t = true;
+        var f = false;
+        // null: ô rỗng
+        var nu = null;
+        //undefined: ko xác định
+        var u =undefined; // gặp khi chúng ta sử dụng tính toán với 1 biến nhưng biến đó không tồn tại ( biến này chưa đc khi báo)
+        
+
+        //các biến có thể thay đổi kiểu dữ liệu đc
+        // ví dụ biến n ở trên (number)
+        n = "say hi"; // n đã biến thành string
+
+        console.log(typeof n);
+
+        var x1 = 5; //number
+        var x2 = "4"; //string
+        console.log(x1 + x2);
+        /*
+        number + number = number
+        number + string = string (5+"4"=54)
+        string + number = string ("4"+5=45)
+        string + string = string  
+        */
+       var x3 = "1234"; 
+       // convert string to number
+       x3 = parseInt(x3); // chuyển đổi chuỗi ký tự thành số nguyên.
+       console.log(x3 + x1);
+       // convert number to string
+       x3 = ""+x3;
+       console.log(x3);
+       console.log(x3);
+
+       var x4 = "3.14159";
+       var x5 = parseInt(x4);
+       console.log(x5);
+       var x6 = parseFloat(x4); // chuyển đổi chuỗi ký tự thành số thực
+       console.log(x6);
+
+       var inputNumber = prompt("Nhập vào trọng lượng của bạn:");
+    //    console.log(inputNumber);
+    //    console.log(typeof inputNumber);
+       inputNumber = parseFloat(inputNumber); // chỉ tính trong giới hạn là lớn hơn 30kg
+       if(inputNumber >=30 && inputNumber <= 150) {
+       var f = inputNumber * 9.878;
+       console.log("với trọng lượng là ${inputNumber} thì trọng lực khi rơi xuống là: ${f}`");
+    }else{
+        console.log("bạn nhập không đúng giá trị yêu cầu!")
+
+    }
+
+
+    //    // viết chương trình nhập vào 2 số là giá trị độ dài hai cạnh chữ nhật
+    //    //tính chu vi diện tích hcn
+    var chieuDai = prompt ('Nhập chiều dài');
+  var chieuRong = prompt ('Nhap chiều rộng');
+  var chieuDai = parseFloat (chieuDai);
+  var chieuRong = parseFloat (chieuRong);
+  var chuVi = (chieuDai + chieuRong) *2;
+  var dienTich = chieuDai * chieuRong;
+  console.log('chu vi hình chữ nhật là', chuVi);
+  console.log('diện tích hình chữ nhật là', dienTich);
+
+    var r = Math.random(); //  trả về một số thập phân ngẫu nhiên khác nhau.
+    console.log(r);
+    //Lucky number
+    //viết chương trình nhập vào 1 số và số tiền muốn đặt cược
+    // sinh ra 1 số ngẫu nhiên từ 0 -->100
+    //kiểm tra người chơi có trúng giải hay ko 
+    //in ra số tiền trúng hoặc lời chia buồn
+    var luckyNumber = prompt('Nhập vào một số bất kỳ (từ 0 đến 100)');
+  var tienCuoc = prompt('Số tiền đặt cược là');
+  var luckyNumber = parseFloat;
+  var tienCuoc = parseFloat;
+  var ranDom = Math.floor(Math.random() * 101); //math.floor là làm tròn số xuống số nguyên , nhân với 101 vì sẽ nhận được một số thập phân ngẫu nhiên trong khoảng từ 0-100. Ví dụ, nếu Math.random() trả về 0.5, thì Math.random() * 101 sẽ trả về 50.5.
+      console.log ('con số may mắn là: '+ ranDom);
+      if(luckyNumber == ranDom) {
+        console.log('Chúc mừng bạn đã trúng giải. Số tiền trúng là: ');
+        console.log('số tiền bạn có là là:' + tienCuoc * 50 )
+    } else {
+        console.log('Chia buồn, bạn đã không trúng giải');
+    }
+    //1 số ký hiệu toán học hay dùng
+    var st = 0;
+    st++; // st = st + 1;
+    st--; // st = st - 1
+    
+    st *= 5; //st = st * 5 (* phép nhân)
+    st /=2; // st = st / 2 (/ phép chia)
+    st +=4; // st = st + 4
+    st -=3; // st = st - 3
+
+    var xs = 7;
+    var sd = xs % 4; // % phéo chia lấy dư:  ví dụ ở đây sd = 3
+    // toán tử -- operator
+   
+    // viết chương trình nhập vào 3 số là độ dài 3 cạnh của tam giác
+    // tính chu vi và diện tích tam giác đó ( nếu đúng là tam giác)
+    //gợi ý: tính diện tích tam giác bằng công thức heron
+// Nhập vào độ dài của ba cạnh tam giác
+var hoanThanh = false;
+while (hoanThanh != true) {
+    var a = parseFloat(prompt("Nhập vào độ dài cạnh a:"));
+    var b = parseFloat(prompt("Nhập vào độ dài cạnh b:"));
+    var c = parseFloat(prompt("Nhập vào độ dài cạnh c:"));
+
+    // Kiểm tra xem ba cạnh có tạo thành tam giác hay không
+    if (a + b > c && a + c > b && b + c > a) {
+        // Tính chu vi
+        var  p = a + b + c;
+        alert(`chu vi tam giác: ${p}`);
+
+        // Tính nửa chu vi
+        var p2 = p/ 2;
+
+        // Tính diện tích theo công thức Heron và làm tròn kết quả
+        var s = Math.sqrt(p2 * (p2 - a) * (p2 - b) * (p2 - c));
+        alert(`Diện tích tam giác: ${s}`);
+       
+        hoanThanh = true; // Đặt hoanThanh thành true để thoát khỏi vòng lặp
+    } else {
+      // nếu sai thì làm gì
+        alert("Ba cạnh đã nhập không tạo thành một tam giác.");
+        var check = confirm('bạn có muốn nhập lại không??') //true false
+       if ( check == true) {
+        hoanThanh = false;
+       } else {
+        hoanThanh = true;
+       }
+        
+
+    }
+}
+alert ('kết thúc chương trình!');
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

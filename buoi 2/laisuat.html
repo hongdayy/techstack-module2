@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+
+
+// viết chương trình tính lãi suất ngân hàng
+//input: khách hàng nhập vào số tiền muốn gửi và số năm muốn gửi
+// process : lãi suất cố định 8% năm -- lãi kép ( lãi cộng dồn vào gốc)
+//output: tính tổng số tiền khách thu về sau khi gửi tiết kiệm
+ 
+var soTien = prompt('nhập vào số tiền muốn gửi tiết kiệm');
+soTien = parseInt(soTien);
+var soNam = prompt('Nhập số năm muốn gửi:');
+soNam = parseInt(soNam);
+
+var year = 0;
+while(year < soNam) {
+  soTien = soTien + soTien * 8 / 100;
+  year++;
+
+}
+alert(`số tiền thu được: ${soTien}`);
+
+// viết chương trình tính số năm cần gửi
+// input: KH nhập số tiền muốn gửi và số tiền ít nhất muốn có
+// process: lãi suất cố định: 8% năm và lãi kép
+// output: tính số năm tối thiể cần gửi đê đạt được số tiền yêu cầu như trên
+    var soTien = prompt('Nhập số tiền muốn gửi tiết kiệm');
+    soTien = parseInt(soTien);
+    var monngMuon = prompt('nhập số tiền muốn nhận về')
+    monngMuon = parseInt(monngMuon);
+
+    var year = 0;
+    while(soTien < monngMuon) {
+      soTien = soTien + soTien * 8 / 100;
+      year ++;
+    }
+    alert(`số năm cần gửi: ${year}`)
+
+    
+
+  
+ 
+
+
+
+
+
+
+   </script> 
+    
+</body>
+</html>

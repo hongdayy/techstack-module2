@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fibonaci</h1>
+    <script type="text/javascript">
+        //nhập 1 số nguyên n
+        // tìm số ở vị trí thứ n trong dãy fibonaci
+        // ví dụ:
+        // 0 1 1 2 3 5 8 13 21 ...
+        // f0 f1 f2 f3 f4 f5 f6 f7 f8 ....
+        // nhập vào số 6 -> báo kết quả là 8
+        var n = prompt("Số thứ tự của số Fibonacci bạn muốn biết là gì?");
+        n = parseInt(n);
+        var n1 = 0;
+        var n2 = 1;
+        var fib = 1;
+        for (i = 2; i <= n; i++) {
+            fib = n1 + n2;
+            n1 = n2;
+            n2 = fib;
+        }
+        alert(`Số fibonacci bạn đang cần tìm là: ${n2}`);
+ 
+       
+        var number = getDataInt("Nhập số n:", 0, Number.MAX_VALUE);
+        var fiboNacci = fiboNacci(number);
+        alert('fiboNacci ở vị trí n là :'+fiboNacci);
+
+        //advance
+        // vẫn là dãy fibonaci nhưng nhập 1 số nguyên n
+        // tìm số cận dưới của n mà thuộc day fibonaci
+        var n = prompt("Số thứ tự của số Fibonacci bạn muốn biết số cận dưới là gì?");
+        n = parseInt(n);
+        var n1 = 0;
+        var n2 = 1;
+        var fib = 1;
+        for (i = 2; i <= n; i++) {
+            fib = n1 + n2;
+            n1 = n2;
+            n2 = fib;
+        }
+        alert(`Số fibonacci bạn đang cần tìm là: ${n2}`);
+
+    </script>
+</body>
+</html>
