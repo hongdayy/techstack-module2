@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Demo</h1>
+    <script type="text/javascript">
+        var ts2405 = [];
+        var arr1 = [1, 3, 31, 20, true, "hello"];
+        var arr2 = [1, 3, 5, 7, 9];  // 0 1 2 3 4 5 6
+        alert(arr2[2]);  // nên alert 2 = 5
+
+        alert[2] = 199; // 1, 3, 199, 7, 9 11
+
+        alert(arr2.length); // vị trí: 0, 1, 2, 3 ............(length-1)
+        //duyệt mảng - CÁCH 1
+        // for(var i =0; i < arr2.length; i++) { // có thể kiểm soát được số lượng  thực hiện theo điều kiện 
+        //     console.log(arr2[i]);
+        //     s = s + arr2[i];
+        // }
+
+        // DUYỆT MẢNG - CÁCH 2
+        for(var b of arr2) { // kiểu này sẽ chạy hết tất cả các phần tử của mảng
+            s = s + x; // x tương đương với arr2[i] ở kiểu viết trên
+        }
+
+
+        //tính trung bình cộng giá trị của mảng
+        alert(`TBC: ${s/arr2.length}`);
+        for(var i = 0; i < arr2.length; i++) { // có thể thay đổi giá trị của phần tử trong mảng đc
+            arr2[i] = i * i + 2;
+
+        }
+          // cho mảng 
+        var numbers = [10, 4, -7, 9, 100, 3, -21, 0, 33]; 
+        
+        
+        // tìm số lớn nhất - nhỏ nhất trong mảng number
+        // Khởi tạo mảng các số
+        var max = numbers[0];
+
+
+// Hiển thị kết quả bằng alert
+alert(`Giá trị lớn nhất trong mảng là: ${max}`);
+alert(`Giá trị nhỏ nhất trong mảng là: ${min}`);
+
+
+        // advice - mảng numbers là do người dùng lập giá trị
+        // Nhập số lượng phần tử của mảng từ người dùng
+var arrayLength = prompt("Nhập độ dài của mảng:");
+arrayLength = parseInt(arrayLength);
+
+// Khởi tạo mảng rỗng để lưu các số
+var numbers = new Array(arrayLength);
+
+// Sử dụng vòng lặp để người dùng nhập giá trị cho từng phần tử trong mảng
+for (var i = 0; i < arrayLength; i++) {
+  var value = prompt("Nhập phần tử thứ " + (i + 1) + ":");
+  numbers[i] = parseFloat(value);
+}
+
+// Khởi tạo biến để giữ giá trị lớn nhất và nhỏ nhất
+var max = numbers[0];
+var min = numbers[0];
+
+// Sử dụng vòng lặp for để tìm giá trị lớn nhất và nhỏ nhất
+for (var i = 1; i < numbers.length; i++) {
+  if (numbers[i] > max) {
+    max = numbers[i];
+  }
+  if (numbers[i] < min) {
+    min = numbers[i];
+  }
+}
+
+// Hiển thị kết quả bằng alert
+alert(`Giá trị lớn nhất trong mảng là: ${max}`);
+alert(`Giá trị nhỏ nhất trong mảng là: ${min}`);
+
+        
+    </script>
+</body>
+</html>

@@ -244,26 +244,39 @@
   // var b = 2;
   // var c = 1.5;
   // console.log(typeof a)
+  
   // //string
   // var fullName = 'hieu';
   // console.log(typeof fullName)
+  
+  
   // //boolean
   // var isSuccess = true; // bình thường theo quy ước boolean hay đặt is đằng trước
   // console.log(typeof isSuccess)
   //  //undefined - định nghĩa ra 1 biến k gán giá trị cho nó
+  
+  
   // var age;
   // //null - không có gì(nothing)
   // var isNull = null;
   // console.log(typeof isNull) //kq ra object
+  
+  
   // // Symbol
   // var id = Symbol('id'); //unique- tính duy nhất
   // var id2 = Symbol('id'); //unique- tính duy nhất
   // console.log(id===id2); // kết quả ra false
+  
+  
   // //function
   // var myFunction = function() {
   //   alert('hi. xin chao!'); // code sẽ k chạy
   // }
+  
+  
   // myFunction(); // gọi function ra nó ms chạy
+ 
+ 
   // //object
   // var myObject = {
   //   name: 'Hieu ngu',
@@ -293,6 +306,67 @@
   //  var a = 1;
   //  var b = 1;
   //  console.log(a === b);
+
+
+
+/* MẢNG - ARRAY
+1. Tạo mảng
+- cách tạo
+- sử dụng cách nào? tại sao?
+- kiểm tra data type
+2. truy xuất mảng
+- độ dài mảng
+- lấy phần tử theo index
+*/
+
+// var languages = [
+//   'javascript',  // các phần tử của mảng, đc đánh tự động bắt đâì = số 0
+//   'ruby',
+//   'php',
+// ];   //khi tạo 1 mảng thì nên đặt ở dạng số nhiều, xuống dòng cho dễ nhìn
+// console.log(languages)
+
+//ARRAY CHỨA TẤT CẢ CÁC KIỂU DỮ LIỆU TRONG JS
+// var languages = [
+//   null,
+//   undefined,
+//   function(){
+//   },
+//   123,
+//   {},
+ 
+
+
+// ];   //khi tạo 1 mảng thì nên đặt ở dạng số nhiều, xuống dòng cho dễ nhìn
+
+
+// console.log(languages)
+
+//CÁCH 2 CỦA ARRAY
+var languages = new Array(
+  'javascript',  
+  'ruby',
+   'php',
+);         // ko cần dùng dấu [], Array viết hoa. TUY NHIÊN CACSCH NÀY K ĐC KHUYẾN CÁO SỬ DỤNG
+console.log (Array.isArray(languages))  //kiểm tra 1 đối tượng có phải array hay ko  
+
+//CÁCH TRUY XUẤT, ĐỘ DÀI MẢNG
+console.log (languages.length)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 /** VÒNG LẶP - LOOP
  * 1. for - lặp với điều kiện đúng
@@ -318,15 +392,15 @@
 
 //DO/WHILE (LOOP) --> LUÔN LUÔN DUYỆT CODE Ở DO TRƯỚC RỒI MỚI TỚI WHILE
 // VÍ DỤ VỀ NẠP THẺ THÀNH CÔNG HAY KHÔNG 
-var i = 0;
- var isSuccess = false; // khi bài toán thất bại sẽ chạy ở while
- do {
-  i++  // NHỚ KO ĐC QUÊN TĂNG GIẢM GIÁ TRỊ CỦA Y ĐỂ TRÁNH CHẠY VÔ HẠN
-  console.log('nạp thẻ lần' + i);
+// var i = 0;
+//  var isSuccess = false; // khi bài toán thất bại sẽ chạy ở while
+//  do {
+//   i++  // NHỚ KO ĐC QUÊN TĂNG GIẢM GIÁ TRỊ CỦA Y ĐỂ TRÁNH CHẠY VÔ HẠN
+//   console.log('nạp thẻ lần' + i);
  
-  if(true) { // khi bài toán thành công
-    isSuccess = true;
-  }
+//   if(true) { // khi bài toán thành công
+//     isSuccess = true;
+//   }
 
- }while(!isSuccess && i < 3); 
+//  }while(!isSuccess && i < 3); 
 

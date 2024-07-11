@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // tìm số lớn nhất - nhỏ nhất trong mảng number
+        // Khởi tạo mảng các số
+
+    // Cho mảng    
+var numbers = [];
+var n = prompt("số lượng số cần nhập vào:");
+n = parseInt(n);
+while(numbers.length < n) {
+    var num = prompt("nhập giá trị:");
+    num = parseInt(num);
+    numbers.push(num); // cho giá trị num vào mảng numbers
+    var max = numbers[0];
+    for(var x of numbers) {
+        if(x > max) {
+            max = x;
+        }
+    }
+    alert(` số lớn nhất : ${max}`)
+
+}
+
+
+    </script>
+    
+</body>
+</html>

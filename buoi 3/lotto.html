@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lotto</h1>
+    <script type="text/javascript">
+        // tạo ngẫu nhiên 1 mảng có 23 giá trị ( tương đương 23 giải) 0 -->99
+        // yêu cầu người chơi nhập vào con só lựa chọn
+        //yêu cầu người chơi đặt cược số tiền
+        // kiểm tra và thông báo số tiền nhận được
+        // tỉ lệ 23k -->80k( nếu trúng 1 số)
+        
+
+       
+       
+// Tạo mảng 23 giá trị ngẫu nhiên từ 0 đến 99
+let luckyNumbers = [];
+for (let i = 0; i < 23; i++) {
+  luckyNumbers.push(Math.floor(Math.random() * 100));//Math.random() để tạo một số thực ngẫu nhiên từ 0 đến 1, sau đó nhân với 100 và sử dụng Math.floor() để lấy phần nguyên, tạo ra một số nguyên ngẫu nhiên từ 0 đến 99. Các số này sẽ được lưu vào mảng luckyNumbers.
+}
+
+// Yêu cầu người chơi nhập số lựa chọn
+let playerNumber = parseInt(prompt("Nhập số lựa chọn của bạn (từ 0 đến 99):"));
+
+// Yêu cầu người chơi đặt cược
+let betAmount = parseFloat(prompt("Nhập số tiền đặt cược:"));
+
+// Kiểm tra xem người chơi có trúng giải không
+let isWinner = false;
+for (let i = 0; i < luckyNumbers.length; i++) {  // duyệt mảng, lặp qua từng số may mắn trong bảng
+  if (playerNumber === luckyNumbers[i]) {
+    isWinner = true;
+    winningAmount += 23000; // Tỉ lệ 23k
+    break;
+  }
+}
+
+// Tính số tiền thưởng
+let winnings;
+if (isWinner) {
+  winnings = betAmount * 80;
+  alert(`Chúc mừng! Bạn đã trúng giải. Bạn nhận được ${winnings} đồng.`);
+} else {
+    
+  alert(`Rất tiếc, bạn đã không trúng giải. Số tiền đã đặt cược là ${betAmount} đồng.`);
+}
+
+
+
+
+
+  // tạo ngẫu nhiên 1 mảng có 23 giá trị ( tương đương 23 giải) 0 -->99
+        // yêu cầu người chơi nhập vào con só lựa chọn
+        //yêu cầu người chơi đặt cược số tiền
+        // kiểm tra và thông báo số tiền nhận được
+        // tỉ lệ 23k -->80k( nếu trúng 1 số)
+        // người chơi mua 5 số khác nhau, kiểm tra giải 1 lần
+         // Tạo mảng các số may mắn (23 số từ 0 đến 99)
+    // let luckyNumbers = [];
+    // for (let i = 0; i < 23; i++) {
+    //   luckyNumbers.push(Math.floor(Math.random() * 100));
+    // }
+
+    // // Yêu cầu người chơi nhập vào 5 số
+    // let playerNumbers = [];
+    // for (let i = 0; i < 5; i++) {
+    //   let playerNumber = parseInt(prompt(`Vui lòng nhập số thứ ${i+1} (0-99):`));
+    //   playerNumbers.push(playerNumber);
+    // }
+
+    // // Yêu cầu người chơi đặt cược
+    // let betAmount = parseFloat(prompt("Vui lòng nhập số tiền đặt cược:"));
+
+    // // Kiểm tra và thông báo số tiền nhận được
+    // let isWinner = false;
+    // let winningAmount = 0;
+    // for (let i = 0; i < playerNumbers.length; i++) {
+    //   for (let j = 0; j < luckyNumbers.length; j++) {
+    //     if (playerNumbers[i] === luckyNumbers[j]) {
+    //       isWinner = true;
+    //       winningAmount += 23000; // Tỉ lệ 23k
+    //     }
+    //   }
+    // }
+
+    // if (isWinner) {
+    //   alert(`Chúc mừng! Bạn đã trúng giải. Bạn nhận được ${winningAmount} VND.`);
+    // } else {
+    //   alert(`Rất tiếc, bạn chưa trúng giải. Số tiền đặt cược của bạn là ${betAmount} VND.`);
+    // }
+
+
+    </script>
+</body>
+</html>
+
