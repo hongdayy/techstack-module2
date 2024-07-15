@@ -7,7 +7,24 @@
 </head>
 <body>
     
-    <!-- Thêm phần tử để hiển thị thời gian đếm ngược -->
+    <!-- 
+       //viết chương trình đếm ngược phút: giây
+// ví dụ: 10 phút
+// 10:00
+//09:59
+//09:58
+//..
+//00:00
+
+//thời gian thật -->
+<title>Đếm ngược phút:giây</title>
+<style>
+  #dem-nguoc {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 50px;
+  }
+</style>
     <div id="dem-nguoc">10:00</div>
 
     <script>
@@ -27,8 +44,8 @@
       }
 
       // Hiển thị thời gian đếm ngược
-      let timedemnguoc = `${phut.toString().padStart(2, '0')}:${giay.toString().padStart(2, '0')}`;
-      document.getElementById("dem-nguoc").textContent = timedemnguoc;
+      let timedemnguoc = `${phut.toString().padStart(2, '0')}:${giay.toString().padStart(2, '0')}`; //toString(): Chuyển thành chuỗi ký tự., padStart(2, '0'): Đảm bảo chuỗi ký tự có độ dài tối thiểu là 2 ký tự, thêm số 0 vào đầu nếu chuỗi ngắn hơn 2 ký tự
+      document.getElementById("dem-nguoc").textContent = timedemnguoc; //Tìm phần tử HTML có ID là "dem-nguoc,Cập nhật nội dung văn bản của phần tử này thành chuỗi thời gian đã định dạng (timedemnguoc).
 
       // Nếu thời gian đếm ngược đã về 0
       if (phut === 0 && giay === 0) {
