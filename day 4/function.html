@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function tinhlainganhang(sotien, sonam) { //khai báo 1 hàm - chưa thực hiện mà chỉ là 1 dạng định nghĩa  --> Tham số
+        var year = 0;            // các nội dung của hàm
+    while(sotien < sonam) {
+      soTien = soTien + soTien * 8 / 100;
+      year ++;
+    }
+    return sotien         //trả vè giá trị sau khi tính toán xong
+
+       } // tạo ra 1 logic có tính áp dụng rộng rãi
+       var x = 5000
+       var y = 8 // tôi có 5000 và muốn gửi 8 năm
+       
+       var sotiencuoicung = tinhlainganhang(x,y)
+
+       alert(`soos tiền thu về khi gửi 5000 trong 8 năm: ${sotiencuoicung}`)
+
+       var sotien2 = tinhlainganhang(1000,2)
+       alert(`so tien 2: ${sotien2}`) //tái sử dụng mã nguồn
+
+
+    </script>
+</body>
+</html>

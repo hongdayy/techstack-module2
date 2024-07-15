@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+         // LÀM THẾ NÀO ĐỂ TẠO RA 1 function
+        // 1. xác định function đó dùng là gì? ( chức năng)
+        //2.input(đầu vào có những gì) -> để làm chức năng này caanc cung cấp thông tin gì 
+        //3.output: khi làm xong báo kết quả như thế NÀO
+        //4.logic: để đc từ input -> output thì cần làm các lệnh theo thứ tự như thế NÀO
+
+
+        //ví dụ
+        //1. hàm dùng để kiểm tra 1 số có phải số nguyên tố ko
+        //2.input: phải cho hàm cái số mà mình muốn kiểm tra
+        //3.output: báo ra màn hình xem nó có phải số nguuyeen tố hay không
+        //4. cho vòng lặp kiểm tra từ 2 dến căn 2 của số đó, hễ mà chia hết cho 1 số bất kì thì ko phải
+        //còn nếu mà k chia thêm đc số nào nữa thì là số nguyên tố
+
+   
+          function songuyento(n) {
+            // Kiểm tra trường hợp số 0 và 1
+            for(var i=2; i<Math.sqrt(n);i++) {
+                if(n % i==0) { //kiểm tra xem chia hết hay ko
+                    alert(`${n} ko phải số nguyên tố`)
+                    //nếu ở đây mà muốn xong việc, muốn dừng hàm
+                    return;// return sẽ làm cho hàm hoàn thành và thoát ra ngoài
+
+
+                }
+
+            }
+            alert(`${n} là số nguyên tố`);
+            return;
+        }
+        //kiểm tra những số khác
+        function kiemtraSNT(n) {
+            for(var i=2; i<Math.sqrt(n);i++) {
+                if(n % i==0) { //kiểm tra xem chia hết hay ko
+                    alert(`${n} ko phải số nguyên tố`)
+                    //nếu ở đây mà muốn xong việc, muốn dừng hàm
+                    return false;// return sẽ làm cho hàm hoàn thành và thoát ra ngoài
+
+
+                }
+        }
+        return true;
+    }
+    songuyento(19);
+    kiemtraSNT(21);
+
+    // viết hàm tính chu vi và diện tích tam giác khi biết độ dài ba cạnh tam giác đó
+    function chuvi(a, b, c) {
+        return a + b + c;
+
+    }
+    function dientich(a, b, c) {
+        var p = (a + b + c) /2
+            return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+    }
+    var canha = 3;
+    var canhb = 4;
+    var canhc = 5;
+
+    var dientichtamgiac = dientich(canha, canhb, canhc);
+    var chuvitamgiac = chuvi(canha, canhb, canhc);
+    alert(` diện tích tam giác là ${dientichtamgiac}`)
+    alert(` chu vi tam giác là ${chuvitamgiac}`)
+
+
+    // viết các function để xử lý array --input: array
+    // 1. viết function tìm số lớn nhất của 1 mảng
+    // 2. viết function tính trung bình cộng 1 mảng
+    // 3. viết function tìm số dương nhỏ nhất trong 1 mảng số
+    // 4. viết function tìm trung bình cộng các số dương trong mảng
+
+    </script>
+</body>
+</html>

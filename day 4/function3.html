@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // viết các function để xử lý array --input: array
+    // 1. viết function tìm số lớn nhất của 1 mảng
+    // 2. viết function tính trung bình cộng 1 mảng
+    // 3. viết function tìm số dương nhỏ nhất trong 1 mảng số
+    // 4. viết function tìm trung bình cộng các số dương trong mảng
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //1
+    function timSoLonNhat(arr) {
+  if (arr.length === 0) {
+    alert("Mảng trống nên không thể tìm số lớn nhất.");
+    return null; // Trả về null nếu mảng trống
+  }
+
+  let soLonNhat = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > soLonNhat) {
+      soLonNhat = arr[i];
+    }
+  }
+
+  return soLonNhat;
+}
+
+let daySo = [5, 2, 8, 3, 7];
+let soLonNhat = timSoLonNhat(daySo);
+if (soLonNhat !== null) {
+  alert(`Số lớn nhất trong mảng là: ${soLonNhat}`);
+}
+
+//2
+// function tinhTrungBinhCong(arr) {
+//   if (arr.length ===0) {
+//     return 0; // Trả về 0 nếu mảng trống
+//   }
+
+//   let tongSo = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     tongSo += arr[i];
+//   }
+
+//   let trungBinhCong = tongSo / arr.length;
+//   return trungBinhCong;
+// }
+// let numbers = [5, 2, 8, 3, 7];
+// let trungBinhCong = tinhTrungBinhCong(numbers);
+// alert(`Trung bình cộng của mảng là: ${trungBinhCong}`); // Trung bình cộng của mảng là: 5
+
+//3
+// function timSoDuongNhoNhat(arr) {
+//   let soDuongNhoNhat = null; // Khởi tạo biến soDuongNhoNhat là null
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0 && (soDuongNhoNhat === null || arr[i] < soDuongNhoNhat)) {
+//       soDuongNhoNhat = arr[i];
+//     }
+//   }
+
+//   if (soDuongNhoNhat === null) {
+//     return "Mảng không chứa số dương"; // Trả về thông báo nếu mảng không chứa số dương
+//   } else {
+//     return soDuongNhoNhat;
+//   }
+// }
+// let numbers = [-2, 0, 5, 3, 8, 1];
+// let soDuongNhoNhat = timSoDuongNhoNhat(numbers);
+// alert(soDuongNhoNhat); // Output: 1
+
+//4
+function tinhTrungBinhCongSoDuong(arr) {
+  let tongSoDuong = 0;
+  let demSoDuong = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      tongSoDuong += arr[i];
+      demSoDuong++;
+    }
+  }
+
+  if (demSoDuong === 0) {
+    console.log("Mảng không có số dương, không thể tính trung bình cộng.");
+    return null;
+  }
+
+  let trungBinhCong = tongSoDuong / demSoDuong;
+  return trungBinhCong;
+}
+let soNguyen = [-2, 5, 3, -1, 7, 0, 4];
+let trungBinhCong = tinhTrungBinhCongSoDuong(soNguyen);
+if (trungBinhCong !== null) {
+  alert(`Trung bình cộng các số dương trong mảng là: ${trungBinhCong}`);
+}
+
+
+
+// setTimeout(function() {
+//     alert('hello');
+// }, 2000) //delay 2000s
+
+
+// function delayAlert() {
+//     alert('hello');
+// }
+
+//delayAlert(); // thực thi hàm
+// setTimeout(delayAlert, 2000); // sẽ thực thi hàm delayalert sau 2000ms --> callback function
+// setInterval(delayAlert,2000); // sẽ thực thi hàm delayalert cứ sau mỗi 2000ms --> lặp vĩnh viễn
+
+var cd = setInterval(delayAlert,1000);
+function delayAlert () {
+    //alert('hello world');
+    console.log(x);
+    x--;
+    if(x < 0) {
+        clearInterval(cd);
+    }
+}
+
+//viết chương trình đếm ngược phút: giây
+// ví dụ: 10 phút
+// 10:00
+//09:59
+//09:58
+//..
+//00:00
+
+//thời gian thật 
+var d = new Date();
+console.log(d);
+var  phut = 10;
+var giay = 0;
+var cd = setInterval(delayAlert, 1000);
+function delayAlert() {
+    if (giay < 10)
+        console.log(phut + " : 0" + giay);
+    else
+        console.log(phut + " : " + giay);
+    giay--;
+    if (giay < 0) {
+        giay = 59;
+        phut--;
+    }
+    if (phut < 0) {
+        clearInterval(cd);
+    }
+}
+   </script>
+</body>
+</html>

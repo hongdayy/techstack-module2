@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Thêm phần tử để hiển thị thời gian đếm ngược -->
+    <div id="dem-nguoc">10:00</div>
+
+    <script>
+    let phut = 10;
+    let giay = 0;
+    let intervalid;
+
+    function capnhatdemnguoc() {
+      // Giảm 1 giây
+      giay--;
+
+      // Nếu giây đã về 0
+      if (giay === -1) {
+        // Giảm 1 phút
+        phut--;
+        giay = 59;
+      }
+
+      // Hiển thị thời gian đếm ngược
+      let timedemnguoc = `${phut.toString().padStart(2, '0')}:${giay.toString().padStart(2, '0')}`;
+      document.getElementById("dem-nguoc").textContent = timedemnguoc;
+
+      // Nếu thời gian đếm ngược đã về 0
+      if (phut === 0 && giay === 0) {
+        // Dừng đếm ngược
+        clearInterval(intervalid);
+        alert("Đếm ngược đã kết thúc!");
+      }
+    }
+
+    // Bắt đầu đếm ngược
+    intervalid = setInterval(capnhatdemnguoc, 1000);
+    </script>
+</body>
+</html>
